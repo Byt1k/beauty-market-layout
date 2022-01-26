@@ -1,0 +1,1297 @@
+ /* Спецификация */
+@font-face {
+    font-family: '1 Amazone M';
+    src: url('../font/1AmazoneM.eot');
+    src: url('../font/1AmazoneM.eot?#iefix') format('embedded-opentype'),
+        url('../font/1AmazoneM.woff2') format('woff2'),
+        url('../font/1AmazoneM.woff') format('woff'),
+        url('../font/1AmazoneM.ttf') format('truetype'),
+        url('../font/1AmazoneM.svg#1AmazoneM') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; 
+  font-size: 18px;
+    
+}
+
+body, h1, h2, h3, h4, p, span, img, a, menu, s{
+    padding: 0;
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h2 {
+  color: #fff;
+  font-size: 54px;
+  font-family: '1 Amazone M';
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+button {
+  
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Бургерное меню */
+
+.mobile-menu {
+  height: 70px;
+  width: 100%;
+  background: #fff;
+  /* position: fixed; */
+  z-index: 3;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.14);/* 
+  margin-top: -70px; */
+  display: none !important;
+  position: absolute;
+  top: 0;left: 0;
+}
+
+
+.hidden-menu {
+  z-index:9999; 
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 80px 0 0 30px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 55%;
+  background-color: #fbe2de;
+  height: 100%;
+  top: 0;
+  right: -56%;
+  transition: right .2s;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  color: #000099;
+  box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.50);
+}
+
+.hidden-menu-ticker {
+  display: none;
+}
+
+.hidden-menu__item {
+    color: #292929;
+    line-height: 36px;
+    font-size: 16px;
+}
+
+.hidden-menu__item:hover {
+    color: #d8ac0c;
+    text-decoration: none;
+}
+
+.btn-menu {
+  color: #292929;
+  padding: 5px;
+  cursor: pointer;
+  transition: right .23s;
+  z-index: 3;
+  width: 48px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  z-index: 9;
+}
+
+.btn-menu span {
+  display: block;
+  height: 5px;
+  background-color: #ff2b9d;
+  margin: 6px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btn-menu span.first {
+  margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu {
+  right: 100px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  right: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -12px;
+} 
+
+.header-line {
+  height: 1px;
+  width: 100%;
+  background-color: #d4d4d4;
+  position: absolute;
+  top:70px;
+  left: 0;
+}
+
+.header-top {
+  height: 70px;
+}
+
+.header__adress {
+  font-size: 13px;
+  color: #3d3d3d;
+}
+
+.header__social {
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a6a6a6;
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.3s ease;
+
+}
+
+.header__social:hover {
+  background-color: #fff;
+  color: #a6a6a6;
+  border: 1px solid #a6a6a6;
+}
+
+.header__tel {
+  font-weight: 700;
+  color: #000;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+.header__tel:hover {
+  color: #a6a6a6;
+  text-decoration: none;
+}
+
+.header-botoom {
+  height: 50px
+}
+
+.main-menu a, .main-menu p {
+  font-size: 13px;
+  color: #8d8d8d;
+  transition: all 0.3s ease;
+}
+
+.main-menu a:hover {
+  color: #000;
+}
+
+/* Первый экран */
+
+.main {
+  background: #f4f4f4 url(../img/bg1-1.jpg) no-repeat center top / cover;
+  color: #292929;
+  height: 732px;
+  z-index: 0;
+}
+
+.main h1 {
+  margin-top: 30px;
+  width: 800px;
+  line-height: 1.35em
+}
+main
+.main__offer-desc {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 15px 0;
+  width: 580px
+}
+
+.main__offer {
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main__input {
+  margin-top: 35px;
+  height: 50px;
+  width: 270px;
+  border-radius: 100px;
+  border: 1px solid #292929;
+  margin-bottom: 10px;
+}
+
+.main__input input {
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid #292929;
+  color: #292929;
+  text-transform: uppercase;
+  background: none;
+  width: 221px;
+}
+
+.btn {
+  background: linear-gradient(to right, #f75c86, #f79e66);
+  height: 50px;
+  width: 270px;
+  border-radius: 100px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 36px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 2px 0 20px 7px rgba(247, 113, 124, 0.7);
+}
+
+/*Для салонов карсоты и клиник*/
+
+.for-beauty-salons, .wholesale-buyers, .private-specialists, .private-buyers {
+  color: #FFF;
+}
+
+.for-beauty-salons {
+  background: url(../img/bg2.jpg) no-repeat center top / cover;
+}
+
+.title-contruction {
+  margin-top: 100px;
+  position: relative;
+  text-align: center;
+  height: 256px;
+}
+
+.title-contruction img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.title-contruction h2 {
+  position: absolute;
+  top: -36px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.title-contruction p {
+  width: 1040px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.title-contruction span {
+  color: #f77679;
+}
+
+.for-beauty-salons__numeral {
+  font-size: 79px;
+  font-family: '1 Amazone M';
+}
+
+.for-beauty-salons__desc {
+  font-size: 24px;
+  margin-top: -16px;
+}
+
+.btn1 {
+  background: #ff2b9d;
+  margin: 50px 0 80px 0;
+}
+
+.btn1:hover {
+  box-shadow: 2px 0 20px 7px rgba(255, 43, 147, 0.7);
+}
+
+/*Оптовым покупателям*/
+
+.wholesale-buyers {
+  background: url(../img/bg3.jpg) no-repeat center top / cover;
+}
+
+.wholesale-buyers p {
+  width: 1000px
+}
+
+.wholesale-buyers p a {
+  color: #ff2b9d;
+}
+
+/*Частным специалистам*/
+
+.private-specialists {
+  background: url(../img/bg4.jpg) no-repeat center center / cover;
+}
+
+.private-specialists .title-contruction {
+  height: 183px;
+}
+
+
+/*Частным покупателям*/
+
+.private-buyers  {
+  background: url(../img/bg5.jpg) no-repeat center top / cover;
+}
+
+.private-buyers p {
+  width: 900px
+}
+
+/* Что мы продаём */
+
+.head-construction {
+  width: 485px;
+  height: 60px;
+  position: relative;
+}
+
+.head-construction img {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  z-index: 0;
+}
+
+.head-construction h2 {
+  color: #292929;
+  z-index: 1;
+}
+
+.what-we-sell {
+  padding: 70px 0;
+}
+
+.what-we-sell__desc {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 55px;
+  line-height: 2.5em
+}
+
+.product {
+  position: relative;
+  margin-bottom: 145px;
+}
+
+.product span, .product p {
+  font-size: 14px;
+  line-height: 2.2em;
+}
+
+.product span {
+  font-weight: 700;
+}
+
+.product-bg {
+  width: 100%;
+  height: 500px;
+  background-color: #fbe2de;
+}
+
+.product-btn {
+  height: 60px;
+  width: 300px;
+  font-size: 16px;
+  line-height: 46px;
+}
+
+.poruct__photo {
+  width: 450px;
+  height: 510px;
+  margin-top: 50px;
+  box-shadow: 2px 0 29px 5px rgba(0, 0, 0, 0.14);
+  background-color: #fff;
+  position: relative;
+}
+
+.photo-right {
+  border-radius: 30px 30px 30px 0;
+}
+
+.photo-left {
+  border-radius: 30px 30px 0px 30px;
+}
+
+
+.product__number {
+  color: #faccc5;
+  font-size: 88px !important;
+  font-family: "1 Amazone M";
+  position: absolute;
+  right: 30px;
+  bottom: -30px;
+}
+
+.offer {
+  width: 500px;
+}
+
+.list {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+}
+
+/* Косметика */
+
+.cosmetics .offer {
+  margin-top: 140px;
+}
+
+.cosmetics .product__buttons {
+  margin-top: 41px;
+}
+
+/* Хна */
+
+.hna .offer {
+  margin-top: 150px;
+}
+
+.hna .product__buttons {
+  margin-top: 132px;
+}
+
+/* Депиляция */
+
+.depilation .offer {
+  margin-top: 160px;
+}
+
+.depilation .product__buttons {
+  margin-top: 113px;
+}
+
+/* Спа */
+
+.spa .offer {
+  margin-top: 150px;
+}
+
+.spa .product__buttons {
+  margin-top: 132px;
+}
+
+/* Хна */
+
+.hna .offer {
+  margin-top: 150px;
+}
+
+.hna .product__buttons {
+  margin-top: 132px;
+}
+
+/* Расходники */
+
+.consumables .offer {
+  margin-top: 160px;
+}
+
+.consumables .product__buttons {
+  margin-top: 84px;
+}
+
+/* Стерилизация */
+
+.sterilization .offer {
+  margin-top: 180px;
+}
+
+.sterilization .product__buttons {
+  margin-top: 161px;
+}
+
+/* Уход за полостью рта */
+
+.mouth .offer {
+  margin-top: 170px;
+}
+
+.mouth .product__buttons {
+  margin-top: 162px;
+}
+
+/*Ногтевой сервис*/
+
+.nails .offer {
+  margin-top: 150px;
+}
+
+.nails .product__buttons {
+  margin-top: 92px;
+} 
+
+/* Обучение */
+
+.education .head-construction {
+  width: 295px;
+}
+
+.education span {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.speaker {
+  width: 265px;
+  height: 320px;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.speaker__bg {
+  width: 100%;
+  height: 75px;
+  background: #f7717c;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.speaker__category {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.speaker__name {
+  font-size: 16px;
+}
+
+.request {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Отзывы */
+
+.reviews h2 { 
+  color: #292929;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.reviews__name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.reviews__company {
+  font-size: 16px;
+  opacity: 0.55;
+  margin-top: 5px;
+}
+
+.reviews__text {
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  max-height: 200px;
+  margin-bottom: 70px;
+}
+
+.quote-l {
+  width: 46px !important;
+  position: absolute;
+  top: -20px;
+  left: -70px;
+}
+
+.quote-r {
+  width: 46px !important;
+  position: absolute;
+  bottom: -20px;
+  right: -70px;
+}
+
+.owl-theme .owl-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -390px;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot:focus {
+  outline: none;
+}
+
+
+.owl-theme .owl-nav [class*=owl-] {
+  margin: -3px 570px; 
+  color: #fff !important;
+  background: none !important;
+}
+
+.owl-carousel {
+  margin-bottom: 320px;
+}
+
+.about-us {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.about-us h2{
+  color: #292929;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us__offer {
+  padding: 70px 0;
+  box-shadow: 0 0 29px 5px rgba(0, 0, 0, 0.11);
+  border-radius: 23px;
+  position: relative;
+  background: #fff;
+}
+
+.about-us__offer_head {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us__list {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+.about-us__offer_text {
+  font-size: 14px;
+  margin-left: 70px;
+  width: 73%
+}
+
+.about-us__offer_text span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about-us__line {
+  position: absolute;
+  width: 500px;
+  height: 3px;
+  background: linear-gradient(to right, #f75c86, #f79e66);
+  bottom: 40px;
+  right: 0;
+}
+
+.form-call {
+  width: 370px;
+  height: 510px;
+  box-shadow: 0 0 29px 5px rgba(0, 0, 0, 0.11);
+  margin-left: -100px;
+  margin-top: -55px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+}
+
+.form-call .about-us__offer_text {
+  margin-left: 0;
+  font-size: 13px;
+}
+
+.list1 {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  z-index: 0;
+}
+
+.list2 {
+  position: absolute;
+  bottom: 50px;
+  right: -15px;
+  z-index: 0;
+}
+
+.list3 {
+  position: absolute;
+  bottom: 173px;
+  right: 206px;
+  z-index: 0;
+}
+
+.form-call input {
+  height: 60px;
+  width: 300px;
+  background: #f7f5f5;
+  border-radius: 100px;
+  border: 1px solid #b5c9d8;
+  font-size: 15px;
+  padding-left: 25px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.form-call__btn {
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.about-us__rectangle {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fbe2de;
+  z-index: 0;
+}
+
+.footer, .credits {
+  margin-top: 1px;
+  background: #000;
+  color: #fff;
+}
+
+.footer__text {
+  font-size: 13px;
+  width: 300px;
+}
+
+.footer__text2 {
+  font-size: 9px;
+}
+
+.footer .list {
+  position: absolute;
+  top: 5px;
+  left: 340px;
+}
+
+.footer__title {
+  font-size: 20px;
+}
+
+.footer__title2 {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer input {
+  font-size: 14px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 210px;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+
+.footer-btn-call {
+  margin-bottom: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.credits {
+  padding: 20px 0;
+}
+
+.footer__social {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer__social:hover {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+
+/* Модальное окно */
+
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 5px/5px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+#popup1 {
+  z-index: 9;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.overlay-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay-popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#popup1 {
+  display: block !important;
+}
+
+.popup {
+  margin: 100px auto;
+  padding: 30px 30px 30px 30px;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+.popup .form-call {
+  margin: 0 auto;
+}
+
+.popup h3 {
+  margin-bottom: 20px;
+} 
+
+.input {
+  width: 90%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 7px;
+  padding-left: 20px;
+  font-size: 14px;
+  border: 1px solid #6481CC;
+  box-shadow: inset 1px 1px 5px rgba(100, 129, 204, 0.56);
+}
+
+.popup .close {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #f7747a;
+}
+
+
+
+.popup {
+    padding: 0;
+    width: 70%;
+  }
+
+
+.block {
+  opacity: 0;
+}
+
+
+
+.left-1200 {
+  display: none;
+}
+
+.reviews iframe {
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.reviews-btn {
+  width: 300px;
+}
+
+#popup3 .form-call {
+  height: 400px;
+}
+
+.video-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.video-text {
+  font-size: 14px;
+}
+
+
+
+/* Медиа-запросы */
+
+@media screen and (max-width: 1200px) {
+
+  .header-top, .header-line, .header-botoom {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: flex !important;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
+
+  .owl-nav {
+    display: none !important;
+  }
+
+  .product-btn.sale {
+    margin-top: 10px;
+  }
+
+  .product-right {
+    display: none;
+  }
+
+  .left-1200 {
+    display: block;
+  }
+
+  .poruct__photo {
+    width: 350px;
+    height: 370px;
+  }
+  
+  .offer {
+    margin-top: 80px !important;
+    width: 100%;
+  }
+
+  .owl-carousel {
+    margin-bottom: 30px;
+  }
+
+
+
+}
+
+@media screen and (max-width: 992px) {
+  .title-contruction {
+    height: 145px;
+  }
+  .title-contruction p {
+    font-size: 15px;
+  }
+  
+  .title-contruction.h90 p {
+    margin-top: -90px;
+  }
+
+  .title-contruction h2 {
+    top: -23px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  .product-bg {
+    height: auto;
+    text-align: center;
+  }
+
+  .poruct__photo {
+    margin: 30px auto -20px auto;
+  }
+
+  .product__buttons {
+    margin-top: 36px !important;
+  }
+
+  .product-btn.sale {
+    margin-top: 0;
+  }
+
+  .request-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .request-block a {
+    margin: 15px 0;
+  }
+
+  .main {
+  height: 510px;
+  }
+
+  .about-us .form-call {
+    margin: -55px auto 0px auto;
+  }
+
+  .about-us__offer_text {
+    width: 84%;
+  }
+
+  .about-us .list1 {
+    top: -10px;
+  }
+
+  .footer .row, .credits .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer p, .credits p {
+    margin: 10px auto
+  }
+  .footer__social {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+   .main h1 {
+    font-size: 24px;
+    width: 100%;
+   }
+  .main__offer-desc {
+    font-size: 15px;
+  }
+  .main__offer {
+    font-size: 15px;
+    width: 270px;
+  }
+
+  .main {
+    height: 410px;
+  }
+  
+  .title-contruction img {
+    display: none;
+  }
+  .title-contruction.h90 p {
+    margin-top: 0px;
+    /* margin-bottom: 0px; */
+  }
+  .title-contruction p {
+    margin-top: 53px;
+  }
+
+  .title-contruction {
+    display: block;
+  }
+
+  .product-btn.sale {
+    margin-top: 10px;
+  }
+
+  .private-specialists p, .for-beauty-salons__desc {
+    font-size: 14px;
+  }
+
+  .private-specialists img {
+    max-width: 43px;
+    max-height: 50px
+  }
+  
+  .for-beauty-salons__numeral {
+    font-size: 61px;
+  }
+
+  .icons {
+    margin-top: -85px
+  }
+
+  .speaker {
+    margin: 0 auto;
+  }
+
+  .quote-l, .quote-r {
+    display: none !important;
+  }
+
+  .about-us__offer_head {
+    margin-top: -27px;
+  }
+
+
+} 
+
+@media screen and (max-width: 576px) {
+
+  .container {
+      width: 100%;
+  }
+
+  .main h1 {
+    font-size: 21px;
+  }
+
+  h2 {
+    font-size: 37px;
+  }
+
+  .title-contruction p {
+    margin-top: 140px;
+  }
+
+  .num {
+    margin-top: 57px !important;
+  }
+
+  .title-contruction p {
+    margin-top: 53px
+  }
+
+  .head-construction, .head-construction img  {
+    width: 300px;
+  }
+  
+  .product-bg .list {
+    display: none;
+  }
+
+  .us__offer_text {
+    width: 66%;
+  }
+
+  .about-us__line {
+    display: none;
+  }
+
+  .main__input {
+    background: #fff;
+  }
+
+  .hidden-menu {
+    width: 80%;
+    right: -81%;
+  }
+
+
+}  
+
+@media screen and (max-width: 495px) {
+  .for-beauty-salons .title-contruction p, .wholesale-buyers .title-contruction p {
+    margin-top: 124px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .title-contruction p {
+    font-size: 12px;
+  }
+  
+  .private-buyers p {
+    margin-top: 99px;
+  }
+
+  .poruct__photo {
+    width: 300px;
+    height: 310px;
+  }
+
+  .us__offer_text {
+    width: 70%;
+  }
+
+  .form-call {
+    width: 300px;
+  }
+
+  .form-call input {
+    width: 250px;
+  }
+  .about-us__offer_head {
+    font-size: 17px;
+  }
+
+  .list1 {
+    right: 0;
+    top: -31px;
+  }
+
+  .list2 {
+    right: 2px
+  }
+
+  .footer .list {
+    display: none;
+  }
+
+  .popup {
+    padding: 0;
+    width: 90%;
+  }
+
+} 
